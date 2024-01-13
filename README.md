@@ -12,14 +12,12 @@ Data Structures refer to the organization and management of data in a way that e
 - List, Stack, Queue
 - Tree
 - Graph
-- Hashing
 
 ### Algorithm
 
+- [Hashing](./dsa/docs/algo/Hashing/main.md)
 - [Sorting](./dsa/docs/algo/Sorting/main.md)
 - Searching
 - Dynamic Programming
 - Back Tracking
 - Sliding Window
-
-## Math Modeling
