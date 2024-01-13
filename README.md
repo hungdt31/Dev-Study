@@ -16,7 +16,7 @@ Data Structures refer to the organization and management of data in a way that e
 
 ### Algorithm
 
-- Sorting
+- [Sorting](./dsa/docs/algo/Sorting/main.md)
 - Searching
 - Dynamic Programming
 - Back Tracking
