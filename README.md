@@ -1,4 +1,4 @@
-# <div style="width: 100%;"><img src="title.svg" style="width: 100%;" alt="Click to see"></div>
+# <div style="width: 100%;"><img src="title.svg" style="width: 100%;" alt="Click"></div>
 
 <div style="width: 100%;">
   <img src="text.svg" style="width: 100%;" alt="Click to see the source">
