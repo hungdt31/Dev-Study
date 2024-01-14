@@ -1,8 +1,9 @@
 # <span class="large outline"> Studying Code With Me </span>
 
 <link href="style.css" rel="stylesheet"></link>
-
-Hello everyone, I'm Doan Tri Hung.
+<div style="width: 100%;">
+  <img src="text.svg" style="width: 100%;" alt="Click to see the source">
+</div>
 
 My major is Computer Science.
 
@@ -24,6 +25,6 @@ Data Structures refer to the organization and management of data in a way that e
 - [Hashing](./dsa/docs/algo/Hashing/main.md)
 - [Sorting](./dsa/docs/algo/Sorting/main.md)
 - Searching
-- Dynamic Programming
+- [Dynamic Programming](./dsa/docs/algo/DP.md)
 - Back Tracking
 - Sliding Window

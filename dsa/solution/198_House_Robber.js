@@ -20,5 +20,24 @@ const rob = (nums) => {
 
     return dp[nums.length - 1];
 };
+
+/***  using Recursive Algorithm  ***/
+const getSumSequence = (begin, nums) => {
+    if (begin >= nums.length) return 0;
+
+    // Include the current house or skip it
+    const includeCurrent = nums[begin] + getSumSequence(begin + 2, nums);
+    const skipCurrent = getSumSequence(begin + 1, nums);
+
+    // Return the maximum amount from the two choices
+    return Math.max(includeCurrent, skipCurrent);
+};
+
+const rob2 = (nums) => {
+    return getSumSequence(0, nums);
+};
+/***********************************/
+
 console.log(rob([2, 7, 9, 3, 1])); // Output: 12
+console.log(rob2([2, 7, 9, 3, 1, 2])); // Output: 13
 
