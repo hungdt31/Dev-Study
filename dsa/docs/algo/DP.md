@@ -192,3 +192,4 @@ console.log(canSum(6, [2,5,3,4], 0)); // true
 | Problem | Difficulty | Tips | Solutions | Complexity |
 |---------|------------|---------|------------|--------------|
 | [198. House Robber](https://leetcode.com/problems/house-robber/) | Medium |  | [Javascript](../../solution/198_House_Robber.js) </br> [Python](../../solution/198_House_Robber.py) | ? |
+| [120. Triangle](https://leetcode.com/problems/triangle/) | Medium | | [Solution I](../../solution/120_Triangle.py) </br> [Solution II](../../solution/120_Triangle.cpp) </br> [Solution III](../../solution/120_Triangle.js)| ? |
