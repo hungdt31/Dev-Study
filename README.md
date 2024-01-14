@@ -1,8 +1,14 @@
-# Learning code
+# <span class="large outline"> Studying Code With Me </span>
 
-Hello everyone, I'm Doan Tri Hung
+<link href="style.css" rel="stylesheet"></link>
 
-## Data Structures and Algorithms (DSA)
+Hello everyone, I'm Doan Tri Hung.
+
+My major is Computer Science.
+
+I'm currently working and studying at Ho Chi Minh City University of Technology.
+
+## <span class="hoverEffect rise"> Data Structures and Algorithm (DSA) </span>
 
 Data Structures refer to the organization and management of data in a way that enables efficient access and modification. Algorithms, on the other hand, are step-by-step procedures designed to solve specific problems. Together, they provide a powerful toolkit  for programmers to tackle complex computational challenges
 

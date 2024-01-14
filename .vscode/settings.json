@@ -1,1 +1,7 @@
-{}
+{
+    "markdownlint.config": {
+        "MD033": {
+            "allowed_elements": ["span","p","details","summary","th","table","td","tr","div","link","h1"]
+        }
+    }
+}
