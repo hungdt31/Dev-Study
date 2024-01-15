@@ -5,7 +5,19 @@ Dynamic programming is a computer programming technique where an algorithmic pro
 
 ## <span style="color:#408080;"> Fundamental </span>
 
-### Memoization
+<details>
+<summary style="font-weight:500;">Memoization Recipe</summary>
+
+1. Make it work
+    - visualize the problem as a tree
+    - implement the tree using recursion
+    - test it
+2. Make it efficient
+    - add a memo object
+    - add a base case to return memo value
+    - store return value into memo
+
+</details>
 
 <details>
 <summary style="font-weight:500;">Fibonacci Problem</summary>
@@ -128,6 +140,8 @@ Example:
 </table>
 </div>
 
+Using Memoization Method:
+
 ```Javascript
 const gridTraveler = (m,n,memo={}) => {
     let key = m + ',' + n;
@@ -144,27 +158,15 @@ console.log(gridTraveler(7,8)) // Output = 1716
 </details>
 
 <details>
-<summary style="font-weight:500;">Memoization Recipe</summary>
-
-1. Make it work
-    - visualize the problem as a tree
-    - implement the tree using recursion
-    - test it
-2. Make it efficient
-    - add a memo object
-    - add a base case to return memo value
-    - store return value into memo
-
-</details>
-
-<details>
-<summary style="font-weight:500;">canSum Memoization </summary>
+<summary style="font-weight:500;">canSum</summary>
 
 Write a function ```canSum(targetSum, numbers)``` that takes in a targetSum and an array of numbers as argument.
 
 The function should return a boolean indicating whether or not it is possible to generate the targetSum using numbers (two elements in every pair is different) from the array.
 
 Constraint: all input numbers are nonnegative.
+
+Using Memoization Method:
 
 ```Javascript
 const canSum = (targetSum, numbers, begin, memo={}) => {
@@ -183,6 +185,43 @@ const canSum = (targetSum, numbers, begin, memo={}) => {
 console.log(canSum(6, [2,5,3,4], 0)); // true
 // m : value of target sum, n: length of array
 // Complexity: O(m*n) time, O(m) space
+```
+
+</details>
+
+<details>
+<summary style="font-weight:500;">howSum</summary>
+
+Write a function ```howSum(targetSum, numbers)``` that takes in a targetSum and an array of numbers as arguments.
+
+The function should return an array containing any combination of elements that add up to exactly the targetSum. If there is no combination that adds up to the targetSum, then return null array.
+
+Using Recursive Algorithm:
+
+```Javascript
+let ListSumEqualTargetSum = [];
+const targetSum = 8;
+const numbers = [3,4,1,2,6];
+const used = new Array(numbers.length).fill(false);
+
+const howSum = (targetSum, numbers, path=[]) => {
+
+    if (targetSum === 0) {
+        ListSumEqualTargetSum.push(path);
+        return;
+    }
+    if (targetSum < 0) return;
+
+    for (let index = 0; index < numbers.length; index++) {
+        if (used[index] === false){
+            used[index] = true;
+            howSum(targetSum - numbers[index], numbers, [numbers[index], ...path]);
+            used[index] = false;
+        }
+    }
+};
+howSum(targetSum,numbers);
+console.log(ListSumEqualTargetSum)
 ```
 
 </details>
