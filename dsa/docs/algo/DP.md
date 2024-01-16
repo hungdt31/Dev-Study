@@ -232,3 +232,4 @@ console.log(ListSumEqualTargetSum)
 |---------|------------|---------|------------|--------------|
 | [198. House Robber](https://leetcode.com/problems/house-robber/) | Medium |  | [Javascript](../../solution/198_House_Robber.js) </br> [Python](../../solution/198_House_Robber.py) | ? |
 | [120. Triangle](https://leetcode.com/problems/triangle/) | Medium | | [Solution I](../../solution/120_Triangle.py) </br> [Solution II](../../solution/120_Triangle.cpp) </br> [Solution III](../../solution/120_Triangle.js)| ? |
+| [338. Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy |  |  [C++](../../solution/338_Counting_Bits.cpp) | O(n) time |
