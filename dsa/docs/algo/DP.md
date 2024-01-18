@@ -226,6 +226,44 @@ console.log(ListSumEqualTargetSum)
 
 </details>
 
+<details>
+<summary style="font-weight:500">bestSum</summary>
+
+Write a function ``bestSum(targetSum, numbers)`` that takes in a targetSum and an array of numbers as arguments.
+
+The function should return an array containing the shortest combination of numbers that add up to exactly the targetSum.
+
+If there is a tie for the shortest combination, you may return any one of the shortest.
+
+```Javascript
+const bestSum = (targetSum, numbers, memo={}) => {
+    if (targetSum in memo) return memo[targetSum];
+    if (targetSum === 0) return [];
+    if (targetSum < 0) return null;
+    let shortestCombination = null;
+    for (let number of numbers){
+        const reminder = bestSum(targetSum - number, numbers,memo);
+        if (reminder !== null){
+            const combination = [number,...reminder];
+            if (shortestCombination === null || combination.length < shortestCombination.length){
+                shortestCombination = combination;
+            }   
+        }
+    }
+    memo[targetSum] = shortestCombination;
+    return shortestCombination;
+}
+console.log(bestSum(100,[1,2,5,25]))
+
+// m = targetSum
+// n = numbers.length
+
+// brute force: O(n^m * m) time, O(m^2) space
+// memoized: O(n * m^2) time, O(m^2) space
+```
+
+</details>
+
 ## <span style="color:#408080;"> Problem Set </span>
 
 | Problem | Difficulty | Tips | Solutions | Complexity |
@@ -233,3 +271,4 @@ console.log(ListSumEqualTargetSum)
 | [198. House Robber](https://leetcode.com/problems/house-robber/) | Medium |  | [Javascript](../../solution/198_House_Robber.js) </br> [Python](../../solution/198_House_Robber.py) | ? |
 | [120. Triangle](https://leetcode.com/problems/triangle/) | Medium | | [Solution I](../../solution/120_Triangle.py) </br> [Solution II](../../solution/120_Triangle.cpp) </br> [Solution III](../../solution/120_Triangle.js)| ? |
 | [338. Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy |  |  [C++](../../solution/338_Counting_Bits.cpp) | O(n) time |
+| [2420. Find All Good Indice](https://leetcode.com/problems/find-all-good-indices/)| Medium | | [C++](../../solution//2420_Find_All_Good_Indice.cpp)| O(n) time </br> O(1) space|
