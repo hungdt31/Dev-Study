@@ -264,6 +264,44 @@ console.log(bestSum(100,[1,2,5,25]))
 
 </details>
 
+<details>
+<summary style="font-weight:500">canConstruct</summary>
+
+Write a function ```canConstruct(target, wordBank)``` that accepts a tarhet string and an array of strings.
+
+The function should return a boolean indicating whether or not the ``target`` can be constructed by concatenating elements of the ``wordBank`` array.
+
+You may reuse elements of ``wordBank`` as many times as needed.
+
+```Javascript
+const canConstruct = (target, wordBank, memo = {}) => {
+    if (target in memo) return memo[target];
+    if (target === ''){
+        return true;
+    }
+    for (let word of wordBank){
+        if (target.indexOf(word) === 0){
+            const suffix = target.slice(word.length);
+            if (canConstruct(suffix, wordBank) === true){
+                memo[target] = true;
+                return true;
+            };
+        }
+    }
+    memo[target] = false;
+    return false;
+}
+console.log(canConstruct("abcdef",["ab","c","dfab","def"]))
+
+// m = target.length
+// n = wordBank.length
+
+// brute force : O(n^m * m) time, O(m^2) space
+// memoized: O(n * m^2) time, O(m^2) space
+```
+
+</details>
+
 ## <span style="color:#408080;"> Problem Set </span>
 
 | Problem | Difficulty | Tips | Solutions | Complexity |
@@ -272,3 +310,4 @@ console.log(bestSum(100,[1,2,5,25]))
 | [120. Triangle](https://leetcode.com/problems/triangle/) | Medium | | [Solution I](../../solution/120_Triangle.py) </br> [Solution II](../../solution/120_Triangle.cpp) </br> [Solution III](../../solution/120_Triangle.js)| ? |
 | [338. Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy |  |  [C++](../../solution/338_Counting_Bits.cpp) | O(n) time |
 | [2420. Find All Good Indice](https://leetcode.com/problems/find-all-good-indices/)| Medium | | [C++](../../solution//2420_Find_All_Good_Indice.cpp)| O(n) time </br> O(1) space|
+| [72. Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | | [Python](../../solution/72_Edit_Distance.py) | ? |
