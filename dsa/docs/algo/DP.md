@@ -310,4 +310,4 @@ console.log(canConstruct("abcdef",["ab","c","dfab","def"]))
 | [120. Triangle](https://leetcode.com/problems/triangle/) | Medium | | [Solution I](../../solution/120_Triangle.py) </br> [Solution II](../../solution/120_Triangle.cpp) </br> [Solution III](../../solution/120_Triangle.js)| ? |
 | [338. Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy |  |  [C++](../../solution/338_Counting_Bits.cpp) | O(n) time |
 | [2420. Find All Good Indice](https://leetcode.com/problems/find-all-good-indices/)| Medium | | [C++](../../solution//2420_Find_All_Good_Indice.cpp)| O(n) time </br> O(1) space|
-| [72. Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | | [Python](../../solution/72_Edit_Distance.py) | ? |
+| [72. Edit Distance](https://leetcode.com/problems/edit-distance/) | Medium | [note](../../solution/72.png)| [Python](../../solution/72_Edit_Distance.py) | ? |
