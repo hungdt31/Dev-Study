@@ -45,3 +45,9 @@ Data Structures refer to the organization and management of data in a way that e
 - [Website for Studying](https://refactoring.guru/design-patterns)
 
 - [Design Patterns là gì? Tại sao nó lại là trợ thủ đắc lực của Developers - Tổng hợp 23 mẫu Design Pattern](https://viblo.asia/p/design-patterns-la-gi-tai-sao-no-lai-la-tro-thu-dac-luc-cua-developers-tong-hop-23-mau-design-pattern-GrLZDBQV5k0)
+
+<div style="width: 100%;">
+  <img src="html_css.svg" style="width: 100%;" alt="Click to see the source">
+</div>
+
+- [Learn about CSS grid layout](./html_css/CSS_grid.md)
