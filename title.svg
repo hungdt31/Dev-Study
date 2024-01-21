@@ -1,56 +1,48 @@
-<svg fill="none" viewBox="0 0 500 100" width="500" height="100" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 500 150" width="500" height="150" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 		<style>
-		body,
-		html {
-			height: 50%;
-			display: grid;
-			background-color: #0287c3;
-			font-family: "Roboto", sans-serif;
-			color: #333;
-		}
+		html, 
+    body {
+      height: 100%;
+    }
 
-		p {
-			margin: auto;
-		}
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #111111;
+    }
 
-		.large {
-			font-size: 50px;
-		}
+    .container {
+      background-color: #111111;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
 
-		.rise {
-			text-shadow: -0.01em -0.01em 0.01em #000;
-			animation: rise 2s ease-in-out 0.5s forwards;
-		}
+    .heading {
+      font-size: 10vw;
+      text-shadow: 4px 4px 0px #3F7FBF;
+      mix-blend-mode: screen;
+      animation: fadeIn 2.5s linear forwards;
+    }
 
-		@keyframes rise {
-			to {
-				text-shadow: 0em 0.01em #0287c3, 0em 0.02em #0287c3, 0em 0.02em 0.03em #ff5,
-					-0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
-					-0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
-					-0.03em -0.03em 0.03em #000;
-				transform: translateY(-0.025em) translateX(0.04em);
-			}
-		}
+    @keyframes fadeIn {
+        0% {
+            opacity: 0
+        }
 
-		.outline {
-			background-clip: text;
-			color: #0287c3;
-			animation: outline 1s ease-in-out 1.5s forwards;
-		}
-
-		@keyframes outline {
-			from {
-				text-shadow: 0em -7em 10em #fff;
-			}
-
-			to {
-				text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
-			}
-		}
+        100% {
+            opacity: 1;
+        }
+    }
     </style>
-    <span class="large outline">Code Something </span>
+    <div class="container">
+      <h1 class="heading">Code Something</h1>
+    </div>
     </div>
 </foreignObject>
 </svg>
