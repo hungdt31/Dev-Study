@@ -302,6 +302,63 @@ console.log(canConstruct("abcdef",["ab","c","dfab","def"]))
 
 </details>
 
+<details>
+<summary style="font-weight:500">countConstruct</summary>
+
+Write a function ```countConstruct(target, wordBank)``` that accepts a target string and an array of strings.
+
+The function should return the number of ways that the ```target``` can be constructed by concatenating elements of the ```wordBank``` array
+
+You may reuse elements of ```wordBank``` as many times as needed
+
+```Javascript
+const countConstruct = (target, wordBank, memo = {}) => {
+    if (target in memo) return memo[target];
+    if (target === "") return 1;
+    let count = 0;
+    for (let word of wordBank){
+        if (target.indexOf(word) === 0){
+            count += countConstruct(target.slice(word.length), wordBank, memo);
+        }
+    }
+    memo[target] = count;
+    return count;
+}
+console.log(countConstruct("abcd",["ab","bcd","ab","cd","abc","d"]))
+// brute force: O(n^m * m) time, O(m^2) space
+// memoized: O(n * m^2) time, O(m^2) space
+```
+
+</details>
+
+<details>
+<summary style="font-weight:500;">allConstruct</summary>
+
+Write a function ```allConstruct(target, wordBank)``` that accepts a target string and an array of strings
+
+The function should return a 2D array containing all of the ways that the ```target``` can be constructed by concatenating elements of the ```wordBank``` array. Each element of the 2D array should represent one combination that constructs the ```target```
+
+You may reuse elements of ```wordBank``` as many times as needed
+
+```Javascript
+const allConstruct = (target, wordBank, memo = {}) => {
+    if (target in memo) return memo[target];
+    if (target === "") return [[]];
+    let result = [];
+    for (let word of wordBank){
+        if (target.indexOf(word) === 0){
+            const els = allConstruct(target.slice(word.length), wordBank, memo).map(el => [word, ...el]);
+            result.push(...els);
+        }
+    }
+    memo[target] = result;
+    return result;
+}
+console.log(allConstruct("I love you",["I","love","you"," ","lo","ve","y","ou"]))
+```
+
+</details>
+
 ## <span style="color:#408080;"> Problem Set </span>
 
 | Problem | Difficulty | Tips | Solutions | Complexity |

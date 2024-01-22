@@ -49,6 +49,7 @@ body{
     background-color: #e1d8d85c;
 }
 .item .content .des{
+    font-size: large;
     padding: 10px;
     font-style: italic;
     font-weight: 700;
