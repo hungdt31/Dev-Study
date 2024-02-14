@@ -51,3 +51,11 @@ Data Structures refer to the organization and management of data in a way that e
 </div>
 
 - [Learn about CSS grid layout](./html_css/CSS_grid.md)
+
+- [Card HTML/CSS effect](./html_css/Card.md)
+
+<div style="width: 100%;">
+  <img src="Py.svg" style="width: 100%;" alt="Click to see the source">
+</div>
+
+- [Virtual python environment](./python/VPE.md)

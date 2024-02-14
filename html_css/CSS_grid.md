@@ -8,4 +8,4 @@ The CSS Grid Layout Module offers a grid-based layout system, with rows and colu
 
 - CSS grid game: [Grid garden](https://cssgridgarden.com/), [CSS grid attack](https://codingfantasy.com/games/css-grid-attack/play)
 
-- Code mẫu: [html file](./code/grid/index.html), [css file](./code/grid/style.css), [js file](./code/grid/main.js)
+- Code Sample: [html file](./code/grid/index.html), [css file](./code/grid/style.css), [js file](./code/grid/main.js)
