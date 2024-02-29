@@ -3,5 +3,8 @@
         "MD033": {
             "allowed_elements": ["span","p","details","summary","th","table","td","tr","div","link","h1","img","i"]
         }
+    },
+    "files.associations": {
+        "iostream": "cpp"
     }
 }
