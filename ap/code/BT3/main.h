@@ -1,9 +1,15 @@
-//
-// Created by ASUS on 06/03/2024.
-//
-
-#ifndef CODE_LIB_H
-#define CODE_LIB_H
-#include <string>
+#ifndef MAIN_H
+#define MAIN_H
+#include<iostream>
+#include<fstream>
+#include<sstream>
+#include<string>
+#include<algorithm>
+#include<map>
+#include<math.h>
+#include<vector>
+#include<queue>
+#include<stack>
+#include<list>
 using namespace std;
-#endif //CODE_LIB_H
+#endif
